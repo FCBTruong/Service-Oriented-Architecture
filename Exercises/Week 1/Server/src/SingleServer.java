@@ -9,9 +9,10 @@ public class SingleServer
     {
         try
         {
-            Socket client=new Socket("localhost",8080);
-            DataOutputStream dos=new DataOutputStream(client.getOutputStream());
-            DataInputStream dis=new DataInputStream(client.getInputStream());
+            ServerSocket sk=new ServerSocket(8080);
+            Socket server=sk.accept();
+            DataOutputStream dos=new DataOutputStream(server.getOutputStream());
+            DataInputStream dis=new DataInputStream(server.getInputStream());
             String s=dis.readUTF();
             String str[]=s.split(" ");
             int tong = 0;

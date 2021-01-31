@@ -9,11 +9,10 @@ public class Client
     {
         try
         {
-            ServerSocket sk=new ServerSocket(8080);
-            Socket client=sk.accept();
+            Socket client=new Socket("localhost",8080);
             DataOutputStream dos=new DataOutputStream(client.getOutputStream());
             DataInputStream dis=new DataInputStream(client.getInputStream());
-            int []a={1,2,3,4,5};
+            int []a={1,3,3,4,5};
             StringBuffer sb=new StringBuffer();
             for(int i=0;i<a.length;i++)
                 sb.append(a[i]+" ");
