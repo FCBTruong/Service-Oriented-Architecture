@@ -12,7 +12,7 @@ public class Client2
             Socket client2=new Socket("localhost",8081);
             DataOutputStream dos=new DataOutputStream(client2.getOutputStream());
             DataInputStream dis=new DataInputStream(client2.getInputStream());
-            int []a={1,2,3,4,5};
+            int []a={1,2,3,4,5,6};
             StringBuffer sb=new StringBuffer();
             for(int i=0;i<a.length;i++)
                 sb.append(a[i]+" ");

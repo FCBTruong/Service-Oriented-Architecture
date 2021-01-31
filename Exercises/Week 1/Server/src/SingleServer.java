@@ -9,6 +9,7 @@ public class SingleServer
     {
         try
         {
+            System.out.println("Server already!");
             ServerSocket sk=new ServerSocket(8080);
             Socket server=sk.accept();
             DataOutputStream dos=new DataOutputStream(server.getOutputStream());
