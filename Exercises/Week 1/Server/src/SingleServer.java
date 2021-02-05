@@ -9,9 +9,10 @@ public class SingleServer
     {
         try
         {
-            System.out.println("Server already!");
             ServerSocket sk=new ServerSocket(8080);
+            System.out.println("Server already!");
             Socket server=sk.accept();
+            System.out.println("connect success");
             DataOutputStream dos=new DataOutputStream(server.getOutputStream());
             DataInputStream dis=new DataInputStream(server.getInputStream());
             String s=dis.readUTF();
