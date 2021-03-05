@@ -1,11 +1,15 @@
 const repository = require("./student.repository.js");
 
 const find = async function (query) {
+  console.log(query);
   return await repository.find(query);
 };
 
 const findById = async function (id) {
-  return await repository.findById(id);
+  const idToQuery = { mssv: id };
+  console.log(Object.assign(idToQuery));
+  // console.log(id);
+  return await repository.find(idToQuery);
 };
 
 const create = async function (data) {
