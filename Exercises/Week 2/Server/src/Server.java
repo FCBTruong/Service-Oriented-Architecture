@@ -4,6 +4,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Locale;
 
+
 public class Server {
     public static String pathProject;
     public static void main (String[] argv){

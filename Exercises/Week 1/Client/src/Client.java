@@ -8,7 +8,7 @@ public class Client
     {
         try
         {
-            Socket client=new Socket("localhost",8080);
+            Socket client=new Socket("localhost",8081);
             DataOutputStream dos=new DataOutputStream(client.getOutputStream());
             DataInputStream dis=new DataInputStream(client.getInputStream());
             int []a={1,3,3,4,5};

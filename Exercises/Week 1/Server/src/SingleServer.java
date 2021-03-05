@@ -10,7 +10,7 @@ public class SingleServer
         try
         {
             ServerSocket sk=new ServerSocket(8080);
-            System.out.println("Server already!");
+            System.out.println("waiting to connect...!");
             Socket server=sk.accept();
             System.out.println("connect success");
             DataOutputStream dos=new DataOutputStream(server.getOutputStream());
